@@ -1,0 +1,63 @@
+
+
+input, select{
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: white;
+    font-size: larger;
+
+}
+
+h1, h3 {
+    color: white;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    font-size: x-large;
+    margin-left: 25%;
+    color: white
+
+
+}
+
+button {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 25%;
+    background-color: green;
+}
+
+input[type=text], input[type=number], input[type=submit], select, label, button {
+        width: 50%;
+        height: 50px;
+      
+}
+
+div {
+    text-align: center;
+}
+
+button, input[type=submit] {
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+
+input[type=submit] {
+    background-color: red;
+}
+
+* {
+    font-family: Serif;
+    background-color: #555555;
+}
+
+label[id=fn] {
+    margin-bottom: 10px;
+}
+
+option {
+    background-color: white;
+}

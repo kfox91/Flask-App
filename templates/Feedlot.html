@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="{{ url_for('static', filename='Scriptcss.css') }}" rel="stylesheet" type="text/css" />
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <div>
+      <h3>Select Feedlot</h3>
+      <form action="#" method="post">
+        <input type="text" id="Feedlot" onkeyup="filterFunction(id, name)" placeholder="Enter Feedlot..." name="FeedlotSelect">
+        <select name="nm" id="FeedlotSelect">
+          <option>Select a Feedlot</option>
+          <option>AGRI BEEF - BOISE VALLEY FEEDERS   2201 RIDGEVIEW RD      PARMA   ID   83660</option>
+          <option>AGRI BEEF - COULEE CATTLE FEEDERS   21668 RAOD 6 SE      WARDEN   WA   98857</option>
+          <option>AGRI BEEF - DH   PO BOX???   8320 BLANTON RD   ETOPIA   WA   99330</option>
+          <option>AGRI BEEF - EL ORO   18857 RD 2.7. SE      MOSES LAKE   WA   98837</option>
+          <option>AGRI BEEF - PAR4   11655 HWY 17 S   ???   WARDEN   WA   98857</option>
+          <option>AGRI BEEF - SNAKE RIVER   2394 FEEDLOT RD      AMERICAN FALLS   ID   83211</option>
+          <option>AGRI BEEF CORPORATE   PO BOX 6640   1555 SHORELINE DRIVE FLOOR 3   BOISE   ID   83702</option>
+          <option>BEEFLAND FEEDYARD   12500 S BEEF ROAD      GARDEN CITY   KS   67846</option>
+          <option>BROOKOVER FEEDYARD   3013 N TAYLOR AVE      GARDEN CITY   KS   67846</option>
+          <option>BROOKOVER RANCH FEEDYARD   5250 BROOKOVER RANCH RD      GARDEN CITY   KS   67846</option>
+          <option>C2 CATTLE CO.   PO BOX 234      BOISE CITY    OK   73933</option>
+          <option>CHAMPION FEEDERS   PO BOX 150   3750 S FM 2942   HEREFORD   TX   79045</option>
+          <option>COBALT CATTLE - ECKLEY   12998 COUNTY RD 42       ECKLEY   CO   80727</option>
+          <option>COBALT CATTLE - HEREFORD   5150 GREAT PLAINS DRIVE      HEREFORD   TX   79045</option>
+          <option>COBALT CATTLE - KISMET   19016 ROAD I      KISMET   KS   67859</option>
+          <option>COBALT CATTLE - LEOTI   857 N HIGHWAY 25      LEOTI   KS   67861</option>
+          <option>COBALT CATTLE - SUBLETTE   1291 US HWY 160      SUBLETTE   KS   67877</option>
+          <option>COBALT CATTLE - TULIA   6443 FM 928      TULIA   TX   79088</option>
+          <option>COBALT CATTLE CORPORATE   921 LARUE RD SUITE A      GARDEN CITY   KS   67846</option>
+          <option>D&D GOTHENBURG   XXX            </option>
+          <option>D&D OTR   XXX            </option>
+          <option>D&D WEST   XXX            </option>
+          <option>DESERET CATTLE FEEDERS   521 RD 50      SATANTA   KS   67870</option>
+          <option>DINKLAGE - FORT MORGAN   12946 CO RD 21      FORT MORGAN   CO   80701</option>
+          <option>DINKLAGE - PROCTOR   31838 ROAD 385      ILIFF   CO   80736</option>
+          <option>DINKLAGE - SIDNEY   10152 ROAD 20      SIDNEY   NE   69162</option>
+          <option>DINKLAGE - TORRINGTON   5396 US HWY 26      TORRINGTON   WY   82240</option>
+          <option>DINKLAGE CORPORATE   PO BOX 134      SIDNEY   NE   69162</option>
+          <option>DINSDALE - PALMER   PO BOX 38   901 ZURICH ST   PALMER   NE   68864</option>
+          <option>DORENKAMP   34500 COUNTY RD 19      HOLLY   CO   81047</option>
+          <option>DRINNIN FEEDLOTS   XXX            </option>
+          <option>ELBERTA VALLEY AG   71750 S. 12100 W.      ELBERTA   UT   84626</option>
+          <option>FRIONA - BOVINA CATTLE COMPANY   PO BOX 150   600 US HWY 60   BOVINA    TX   79009</option>
+          <option>FRIONA - DALHART CATTLE FEEDERS   2795 US-54      DALHART   TX   79022</option>
+          <option>FRIONA - FRIONA FEEDYARD   2730 FM 3140       FRIONA    TX   79035</option>
+          <option>FRIONA - LITTLEFIELD FEEDYARD   1640 FM 37      AMHERST   TX   79312</option>
+          <option>FRIONA - RANDALL COUNTY FEEDERS   15000 FM 2219      AMARILLO   TX   79119</option>
+          <option>FRIONA - SWISHER COUNTY CATTLE COMPANY    6656 FM 214       HAPPY    TX   79042</option>
+          <option>FRIONA CATTLE FEEDERS NORTH #1   922 90TH ROAD      SUBLETTE    KS   67877</option>
+          <option>FRIONA CATTLE FEEDERS NORTH #2   1174 EMPIRE CIRCLE      SATANTA   KS   67870</option>
+          <option>FRIONA CORPORATE   500 S TAYLOR SUITE 601 (LB 253)      AMARILLO   TX   79102</option>
+          <option>FRONTERA FEEDYARD   531 CO RD 153      MULESHOE   TX   79347</option>
+          <option>H & H CATTLE   16708 102ND RD      BURDEN    KS   67019</option>
+          <option>HARRIS FEEDING COMPANY   29475 FRESNO  - COALINGA RD   RT 1 BOX 400   COALINGA   CA   93210</option>
+          <option>HAYWIRE FEEDYARD   3501 SE TETER RD      EL DORADO   KS   67042</option>
+          <option>HENRY C HITCH    3633 ROAD Z      GUYMON   OK   73942</option>
+          <option>HERITAGE BEEF   1506 ROAD 30      SUBLETTE   KS   67877</option>
+          <option>HI-GAIN COZAD   401 1 STREET      GOTHENBURG   NE   69138</option>
+          <option>HI-GAIN FARNUM               </option>
+          <option>HIGH PLAINS FEEDYARD   2001 S-C ROAD      MITCHELL   NE   69357</option>
+          <option>HITCH 1   RT 1 BOX 53      HOOKER    OK   73945</option>
+          <option>HY PLAINS FEEDYARD   PO BOX 356      MONTEZUMA   KS   67867</option>
+          <option>JAMIE JARNIGIN               </option>
+          <option>JDS LIVESTOCK   10740 HWY 71      SCOTTSBLUFF   NE   69361</option>
+          <option>KADOKA FEEDLOT   24651 FRANKLIN CR. RD      PHILLIP    SD   57567</option>
+          <option>LINDY LIVESTOCK   260 S G ROAD      MORRILL   NE   69358</option>
+          <option>LAKIN DAIRY   828 KS-25       LAKIN   KS   67860</option>
+          <option>LOST TRAIL   HC1 BOX 3A      BOISE CITY   OK   73933</option>
+          <option>MAGNUM FEEDYARD   PO BOX 126   11665 MORGAN COUNTY ROAD 1   WIGGINS   CO   80654</option>
+          <option>MASCOW   499N COUNTY ROAD 20      MOSCOW   KS   67952</option>
+          <option>MAVERICK BEEF   10377 US 385      BRIDGEPORT   NE   69336</option>
+          <option>MEAD CATTLE COMPANY   1344 COUNTY RD 10      MEAD   NE   68041</option>
+          <option>NEOSHO VALLEY FEEDERS   26059 VICTORY RD      PARSONS   KS   67357</option>
+          <option>OLSON FARMS   PO BOX 307      HERSHEY   NE   69143</option>
+          <option>PADLOCK RANCH   8420 US HIGHWAY 14      RANCHESTER   WY   82839</option>
+          <option>PAUL MILLER CATTLE COMPANY   4756 STATE HIGHWAY 154      TORRINGTON   WY   82240</option>
+          <option>PERRYTON FEEDERS   13210 HWY 70      PERRYTON   TX   79070</option>
+          <option>PORTER FARMS   3309 RD W7      READING   KS   66868</option>
+          <option>PRATT - ASHLAND FEEDERS   2590 CR L      ASHLAND   KS   67831</option>
+          <option>PRATT - BUFFALO FEEDERS   PO BOX 409   19438 US HWY 64   BUFFALO   OK   73834</option>
+          <option>PRATT - PRATT FEEDERS   PO BOX 945   40010 NW 20TH AVE   PRATT   KS   67124</option>
+          <option>RANDY MILLER CATTLE COMPANY               </option>
+          <option>ROAD 5 CATTLE CO               </option>
+          <option>ROODE FEEDLOT   PO BOX 510   57010 710TH RD   FAIRBURY   NE   68352</option>
+          <option>SAGE ASSET MANAGEMENT   951 ROAD 13       HUGOTON   KS   67951</option>
+          <option>SMITH VALLEY CATTLE FEEDERS   PO BOX 18   500 HUDSON WAY   SMITH   NV   89430</option>
+          <option>SNAKE CREEK RANCH   2618 CR GG      ASHLAND   KS   67831</option>
+          <option>SONRISE FEEDERS - LASALLE   XXX            </option>
+          <option>SONRISE FEEDERS - WELLINGTON   XXX            </option>
+          <option>STROMBERGER FARMS   PO BOX 787      IMPERIAL    NE   69033</option>
+          <option>T&E CATTLE COMPANY   444 W 13TH       GRAND ISLAND   NE   68803</option>
+          <option>TASCOSA FEEDYARD   PO BOX 220   3720 SAMPSON RD   BUSHLAND   TX   79012</option>
+          <option>THUNDERSTRUCK FARMS   955 S CIRCLE LAND RD      GARDEN CITY   KS   67846</option>
+          <option>TULS   12631 ROAD C      LIBERAL    KS   67901</option>
+          <option>VALLEY FEEDYARD   7775 L 62A      BAYARD    NE   69334</option>
+          <option>VAQUERO TRADING   6510 MCNUTT RD      ANTHONY    NM   88021</option>
+          <!-- <option>Double Bar K Farms   JJ104 N Delaware Ave   Ransom, KS  67572</option>
+          <option>Boise Valley Feeders, LLC   2201 Ridgeview Road   Parma, ID  83660</option>
+          <option>Coulee Cattle Feeder   21668 Rd. 6 S.E.   Warden, WA  98857</option>
+          <option>Deseret Cattle Feeders   521 Rd 50    Satanta, KS  67870</option>
+          <option>Dinklage Feedyard - Ft. Morgan   13946 Co. Rd. 21   Ft. Morgan, CO  80701</option>
+          <option>Dinklage Feedyard - Proctor   31838 Road 385   Iliff, CO 80736</option>
+          <option>Dinklage Feedyard - Sidney   10152 Road 20   Sidney, NE  69162</option>
+          <option>El Oro Cattle Company   18857 Rd. 2.7 S.E.   Moses Lake, WA 98837</option>
+          <option>Cobalt Cattle - Eckley   12998 County Road 42   Eckley, CO  80727</option>
+          <option>Cobalt Cattle - Hereford   5150 Great Plains Dr.   Hereford, TX 79045</option>
+          <option>Cobalt Cattle - Kismet   19016 Road I   Kismet, KS  67859</option>
+          <option>Cobalt Cattle - Leoti   857 N Highway 25   Leoti, KS  6761</option>
+          <option>Cobalt Cattle - Sublette   1291 Old Santa Fe Drive   Sublette, KS  67877</option>
+          <option>Cobalt Cattle - Tulia   6443 FM 928   Tulia, TX 79088</option>
+          <option>Harris Feeding Company   Rt. 1 Box 400   Coalinga, CA 93210</option>
+          <option>Jamie Jarnigan   5610 Railroad Ave   Holcomb, KS  67851</option>
+          <option>Littlefield Feedyard   1640 FM 37    Amherst, TX  79312</option>
+          <option>Lettie McKinney   4256 W Rd 12   Johnson, KS 67855</option>
+          <option>Magnum Feedyard, Inc.   11665 MCR 1, PO Box 126   Wiggins, CO  80654</option>
+          <option>Maverick Beef Feedlot   10377 US 385    Bridgeport, NE  69336</option>
+          <option>Par 4 Cattle   11856 Hwy 17 South   Warden, WA  98857</option>
+          <option>Roode Feedlot   PO Box 510    Fairbury, NE  68352</option>
+          <option>Smith Valley Cattle Feeders   500 Hudson Way, PO Box 89430   Smith, NV 89430</option>
+          <option>Snake River Cattle Feeders   PO Box 549   American Falls, ID  83211</option>
+          <option>Snake Creek Ranch    2618 CR GG    Ashland, KS 67831</option>
+          <option>Stromberger Farms, Inc.   31899 734 Rd   Champion, NE  69023</option>
+          <option>Stromberger Farms, Inc. - Paxton   1425 West Hwy 30   Paxton, NE  69155</option>
+          <option>T&E Cattle Company   4444 W 13th   Grand Island, NE 68803</option>
+          <option>Randall County Feedyard   15000 FM 2219    Amarillo, TX  79119</option>
+          <option>DH Feeders   8230 Blanton Rd   Eltopia WA 99330</option>""" -->
+
+        </select>
+        <input type="submit" value="Submit">
+    </body>
+</html>
+
+<script>
+    function filterFunction(theinput, theinput2) {
+      var input, filter, select, option, i;
+      input = document.getElementById(theinput);
+      filter = input.value.toUpperCase();
+      select = document.getElementById(theinput2);
+      option = select.options;
+      for (i = 0; i < option.length; i++) {
+        if (option[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+          option[i].style.display = "";
+        } else {
+          option[i].style.display = "none";
+        }
+      }
+    }
+</script>

@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="{{ url_for('static', filename='Scriptcss.css') }}" rel="stylesheet" type="text/css" />
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <form action="#" method="post">
+      <div id="line">
+        <label>Species</label>
+        <select name="species">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect">
+        <select name="Drugs" id="DrugSelect">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Paste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity" placeholder="Enter Quantity...">
+
+        <label>Size</label>
+        <input type="text" id="size" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect">
+
+        <select name="Sizes" id="SizeSelect">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+        <button type="button" onclick="showLine(name, id)" id="button1" name="line1">New Drug</button>
+      </div>
+
+
+      <div id="line1" style="display:none;">
+        <label>Species</label>
+        <select name="species1">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+          <input type="text" id="Drug1" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect1">
+          <select name="Drugs1" id="DrugSelect1">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Paste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+          </select>
+          <label>Quantity</label>
+
+          <input type="number" id="quantity" name="Quantity1" placeholder="Enter Quantity...">
+
+          <label>Size</label>
+          <input type="text" id="size1" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect1">
+          <select name="Sizes1" id="SizeSelect1">
+            <option></option>
+            <option>ANY</option>
+            <option>1 gm</option>
+            <option>4 gm</option>
+            <option>25 gm</option>
+            <option>5 ml</option>
+            <option>20 ml</option>
+            <option>30 ml</option>
+            <option>50 ml</option>
+            <option>90 ml</option>
+            <option>100 ml</option>
+            <option>150 ml</option>
+            <option>250 ml</option>
+            <option>500 ml</option>
+            <option>1000 ml</option>
+            <option>Tube</option>
+            <option>1 Gallon</option>
+          </select>
+          <button type="button" onclick="showLine(name, id)" id="button2" name="line2">New Drug</button>
+      </div>
+
+
+
+      <div id="line2" style="display:none;">
+        <label>Species</label>
+        <select name="species2">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug2" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect2">
+        <select name="Drugs2" id="DrugSelect2">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Paste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity2" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size2" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect2">
+
+        <select name="Sizes2" id="SizeSelect2">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+        <button type="button" onclick="showLine(name, id)" id="button3" name="line3">New Drug</button>
+      </div>
+
+      <div id="line3" style="display:none;">
+        <label>Species</label>
+        <select name="species3">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug3" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect3">
+        <select name="Drugs3" id="DrugSelect3">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Paste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity3" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size3" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect3">
+
+        <select name="Sizes3" id="SizeSelect3">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+        <button type="button" onclick="showLine(name, id)" id="button4" name="line4">New Drug</button>
+      </div>
+
+
+
+      <div id="line4" style="display:none;">
+        <label>Species</label>
+        <select name="species4">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug4" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect4">
+        <select name="Drugs4" id="DrugSelect4">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Paste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity4" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size4" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect4">
+
+        <select name="Sizes4" id="SizeSelect4">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button5" name="line5">New Drug</button>
+      </div>
+
+      <div id="line5" style="display:none;">
+        <label>Species</label>
+        <select name="species5">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug5" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect5">
+        <select name="Drugs5" id="DrugSelect5">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity5" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size5" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect5">
+
+        <select name="Sizes5" id="SizeSelect5">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button6" name="line6">New Drug</button>
+      </div>
+
+
+      <div id="line6" style="display:none;">
+        <label>Species</label>
+        <select name="species6">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug6" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect6">
+        <select name="Drugs6" id="DrugSelect6">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity6" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size6" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect6">
+
+        <select name="Sizes6" id="SizeSelect6">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button7" name="line7">New Drug</button>
+      </div>
+
+
+      <div id="line7" style="display:none;">
+        <label>Species</label>
+        <select name="species7">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug7" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect7">
+        <select name="Drugs7" id="DrugSelect7">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity7" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size7" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect7">
+
+        <select name="Sizes7" id="SizeSelect7">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button8" name="line8">New Drug</button>
+      </div>
+
+
+      <div id="line8" style="display:none;">
+        <label>Species</label>
+        <select name="species8">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug8" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect8">
+        <select name="Drugs8" id="DrugSelect8">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity8" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size8" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect8">
+
+        <select name="Sizes8" id="SizeSelect8">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button9" name="line9">New Drug</button>
+      </div>
+
+
+      <div id="line9" style="display:none;">
+        <label>Species</label>
+        <select name="species9">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug9" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect9">
+        <select name="Drugs9" id="DrugSelect9">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity9" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size9" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect9">
+
+        <select name="Sizes9" id="SizeSelect9">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button10" name="line10">New Drug</button>
+      </div>
+
+
+      <div id="line10" style="display:none;">
+        <label>Species</label>
+        <select name="species10">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug10" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect10">
+        <select name="Drugs10" id="DrugSelect10">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity10" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size10" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect10">
+
+        <select name="Sizes10" id="SizeSelect10">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button11" name="line11">New Drug</button>
+      </div>
+
+
+      <div id="line11" style="display:none;">
+        <label>Species</label>
+        <select name="species11">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug11" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect11">
+        <select name="Drugs11" id="DrugSelect11">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity11" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size11" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect11">
+
+        <select name="Sizes11" id="SizeSelect11">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button12" name="line12">New Drug</button>
+      </div>
+
+
+      <div id="line12" style="display:none;">
+        <label>Species</label>
+        <select name="species12">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug12" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect12">
+        <select name="Drugs12" id="DrugSelect12">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity12" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size12" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect12">
+
+        <select name="Sizes12" id="SizeSelect12">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button13" name="line13">New Drug</button>
+      </div>
+
+
+      <div id="line13" style="display:none;">
+        <label>Species</label>
+        <select name="species13">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug13" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect13">
+        <select name="Drugs13" id="DrugSelect13">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity13" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size13" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect13">
+
+        <select name="Sizes13" id="SizeSelect13">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button14" name="line14">New Drug</button>
+      </div>
+
+
+      <div id="line14" style="display:none;">
+        <label>Species</label>
+        <select name="species14">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug14" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect14">
+        <select name="Drugs14" id="DrugSelect14">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity14" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size14" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect14">
+
+        <select name="Sizes14" id="SizeSelect14">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button15" name="line15">New Drug</button>
+      </div>
+
+
+      <div id="line15" style="display:none;">
+        <label>Species</label>
+        <select name="species15">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug15" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect15">
+        <select name="Drugs15" id="DrugSelect15">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity15" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size15" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect15">
+
+        <select name="Sizes15" id="SizeSelect15">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button16" name="line16">New Drug</button>
+      </div>
+
+
+      <div id="line16" style="display:none;">
+        <label>Species</label>
+        <select name="species16">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug16" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect16">
+        <select name="Drugs16" id="DrugSelect16">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity16" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size16" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect16">
+
+        <select name="Sizes16" id="SizeSelect16">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button17" name="line17">New Drug</button>
+      </div>
+
+
+      <div id="line17" style="display:none;">
+        <label>Species</label>
+        <select name="species17">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug17" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect17">
+        <select name="Drugs17" id="DrugSelect17">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity17" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size17" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect17">
+
+        <select name="Sizes17" id="SizeSelect17">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button18" name="line18">New Drug</button>
+      </div>
+
+
+      <div id="line18" style="display:none;">
+        <label>Species</label>
+        <select name="species18">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug18" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect18">
+        <select name="Drugs18" id="DrugSelect18">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity18" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size18" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect18">
+
+        <select name="Sizes18" id="SizeSelect18">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button19" name="line19">New Drug</button>
+      </div>
+            <div id="line19" style="display:none;">
+        <label>Species</label>
+        <select name="species19">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug19" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect19">
+        <select name="Drugs19" id="DrugSelect19">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity19" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size19" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect19">
+
+        <select name="Sizes19" id="SizeSelect19">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      <button type="button" onclick="showLine(name, id)" id="button20" name="line20">New Drug</button>
+      </div>
+
+
+      <div id="line20" style="display:none;">
+        <label>Species</label>
+        <select name="species20">
+          <option></option>
+          <option>Bovine</option>
+          <option>Equine</option>
+        </select>
+        <label> Product</label>
+        <input type="text" id="Drug20" onkeyup="filterFunction(id, name)" placeholder="Search for Product..." name="DrugSelect20">
+        <select name="Drugs20" id="DrugSelect20">
+          <option></option>
+          <option>Acepromazine</option>
+          <option>Advocin</option>
+          <option>Anased La 100mg/ml</option>
+          <option>Banamine </option>
+          <option>Banamine Transdermal</option>
+          <option>Banamine Pa  ste</option>
+          <option>Baytril 100</option>
+          <option>BioMycin 200</option>
+          <option>Caldex CMPK</option>
+          <option>Ceftiflex</option>
+          <option>Cefenil RTU</option>
+          <option>Cystorelin</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Depomedrol</option>
+          <option>Dexamethasone</option>
+          <option>Dormosedan</option>
+          <option>Dormosedan Gel</option>
+          <option>Draxxin</option>
+          <option>E-SE</option>
+          <option>Equi Bute Paste Apple</option>
+          <option>Epinephrine</option>
+          <option>EstroPlan</option>
+          <option>Estrumate</option>
+          <option>Excede</option>
+          <option>Excenel RTU</option>
+          <option>Factrel</option>
+          <option>Fertagyl</option>
+          <option>Iodine</option>
+          <option>Lasix</option>
+          <option>Lidocaine</option>
+          <option>Lutalyse</option>
+          <option>Lutalyse (high con)</option>
+          <option>Micotil</option>
+          <option>Multimin 90</option>
+          <option>Mu-SE</option>
+          <option>Naxcel</option>
+          <option>NeoPoly Dex Ophthalmic Ointment</option>
+          <option>Norfenicol</option>
+          <option>NuFlor</option>
+          <option>Oxytocin</option>
+          <option>Polyflex</option>
+          <option>Prostamate</option>
+          <option>Phenylzone Paste</option>
+          <option>Rabvac 3</option>
+          <option>ResFlor Gold</option>
+          <option>Salix or Furosemide</option>
+          <option>Salmonella Newport SRP</option>
+          <option>Sodium Bicarbonate </option>
+          <option>Sodium iodide</option>
+          <option>Sterile Water</option>
+          <option>Super B complex</option>
+          <option>Sustain III boluses</option>
+          <option>Synchsure</option>
+          <option>Thiamine 200</option>
+          <option>Thiamine 500</option>
+          <option>Uniprim</option>
+          <option>Vetribute</option>
+          <option>Vitamin B-12, 1000mcg</option>
+          <option>Vitamin B Complex</option>
+          <option>Vitamin E IU</option>
+          <option>Vitamin K</option>
+          <option>Vitamin C</option>
+          <option>Zactran</option>
+          <option>Zuprevo</option>
+        </select>
+        <label>Quantity</label>
+
+        <input type="number" id="quantity" name="Quantity20" placeholder="Enter Quantity...">
+        <label>Size</label>
+        <input type="text" id="size20" onkeyup="filterFunction(id, name)" placeholder="Search for size..." name="SizeSelect20">
+
+        <select name="Sizes20" id="SizeSelect20">
+          <option></option>
+          <option>ANY</option>
+          <option>1 gm</option>
+          <option>4 gm</option>
+          <option>25 gm</option>
+          <option>5 ml</option>
+          <option>20 ml</option>
+          <option>30 ml</option>
+          <option>50 ml</option>
+          <option>90 ml</option>
+          <option>100 ml</option>
+          <option>150 ml</option>
+          <option>250 ml</option>
+          <option>500 ml</option>
+          <option>1000 ml</option>
+          <option>Tube</option>
+          <option>1 Gallon</option>
+        </select>
+      </div>
+
+      <div>
+      <input type="submit" value="Submit">
+      </div>
+
+</html>
+
+<script>
+  function filterFunction(theinput, theinput2) {
+    var input, filter, select, option, i;
+    input = document.getElementById(theinput);
+    filter = input.value.toUpperCase();
+    select = document.getElementById(theinput2);
+    option = select.options;
+    for (i = 0; i < option.length; i++) {
+      if (option[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+        option[i].style.display = "";
+      } else {
+        option[i].style.display = "none";
+      }
+    }
+  }
+
+  function showLine(lineNum, buttonNum) {
+    var line = document.getElementById(lineNum);
+    var button = document.getElementById(buttonNum)
+    button.style.display = "none";
+    line.style.display = "block";
+}
+
+
+
+</script>

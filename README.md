@@ -1,1 +1,1 @@
-This app was produced to make the process of vetinary consultants writting scripts for feedyards easier. It takes in input and appends those values into an excel worksheet template, and then emails it. The app also checks for license validity.
+This app was produced to make the process of veterinary consultants writing scripts for feed yards easier. It takes in input and appends those values into an excel worksheet template, and then emails it. The app also checks for license validity.
